@@ -16,6 +16,10 @@ export default {
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Roboto'
+      },
+      {
+        rel: 'stylesheet', 
+        href: 'https://fonts.googleapis.com/icon?family=Material+Icons'
       }
     ]
   },

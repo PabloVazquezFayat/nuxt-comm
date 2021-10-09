@@ -23,7 +23,9 @@
           </li>
         </ul>
         <div class="navbar-container-buttons-divider"></div>
-        <div class="cart">cart</div>
+        <div class="cart">
+          <span class="material-icons">shopping_cart</span>
+        </div>
         <div class="navbar-container-buttons-divider"></div>
         <ul class="navbar-container-buttons-actions">
           <li><router-link to="/login">login</router-link></li>
