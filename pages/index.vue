@@ -10,3 +10,5 @@ export default Vue.extend({
   components: { home },
 })
 </script>
+
+
