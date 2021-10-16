@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Navbar />
+    <Navbar :fluggen="fluggen" />
     <HeroBanner />
     <Categories />
     <Featured />
@@ -11,5 +11,11 @@
 <script lang="ts">
 import Vue from 'vue'
 
-export default Vue.extend({})
+export default Vue.extend({
+  data() {
+    return {
+      fluggen: { name: 'Fluggen', surname: 'Kachenholen' },
+    }
+  },
+})
 </script>

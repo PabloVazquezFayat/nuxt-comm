@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar">
     <div class="navbar-container">
-      <div class="navbar-container-logo">
+      <div class="navbar-container-logo" @click="greet">
         <img src="~/assets/images/logo.png" alt="logo" />
       </div>
       <div class="navbar-container-buttons">
@@ -24,7 +24,7 @@
         </ul>
         <div class="navbar-container-buttons-divider"></div>
         <div class="cart">
-          <span class="material-icons">shopping_cart</span>
+          <span class="material-icons">{{ setIcon }}</span>
         </div>
         <div class="navbar-container-buttons-divider"></div>
         <ul class="navbar-container-buttons-actions">
@@ -38,7 +38,37 @@
   </nav>
 </template>
 
+<script lang="ts">
+import { Vue, Component, Prop } from 'vue-property-decorator'
+
+interface Fluggen {
+  name: string
+  surname: string
+}
+
+@Component
+export default class Navbar extends Vue {
+  @Prop({ type: Object }) readonly fluggen!: Fluggen
+
+  greet(e: any): void {
+    console.log(e.target)
+  }
+
+  get setFluggen(): string {
+    return `${this.fluggen.name} ${this.fluggen.surname}`
+  }
+
+  get setIcon(): any {
+    return 'shopping_cart'
+  }
+}
+</script>
+
+
 <style lang="scss" scoped>
+h1 {
+  color: white;
+}
 .navbar {
   background: $color-black-1;
   widows: 100%;
